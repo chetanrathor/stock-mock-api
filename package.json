@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "API / Data Processing System For Web Application Of Stock Price Mock.",
   "main": "api/index.js",
+  "engines": {
+    "node": "14.x"
+  },
   "scripts": {
     "start:local": "nodemon index.js",
     "start:prod": "node api/index.js",
