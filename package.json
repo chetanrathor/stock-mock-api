@@ -2,10 +2,10 @@
   "name": "mock_stock_api",
   "version": "1.0.0",
   "description": "API / Data Processing System For Web Application Of Stock Price Mock.",
-  "main": "index.js",
+  "main": "api/index.js",
   "scripts": {
-    "start:local": "nodemon index.js",
-    "start:prod": "node index.js",
+    "start:local": "nodemon api/index.js",
+    "start:prod": "node api/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "chetan rathor",
