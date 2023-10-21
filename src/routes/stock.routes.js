@@ -7,7 +7,7 @@ const { addNewStock, getOneStockValidation } = require('../validations/stock.val
  */
 
 router.get('', (request, response) => response.send("api/stocks"))
-router.post('/', validate(addNewStock), (request, response) => addStock(request, response))
-router.get('/:id',(request,response)=>getOneStock(request, response))
+router.post('', validate(addNewStock), (request, response) => addStock(request, response))
+router.get(':id',(request,response)=>getOneStock(request, response))
 
 module.exports = router

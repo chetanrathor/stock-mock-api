@@ -1,7 +1,7 @@
 const { getPort, getMongoDbUrl } = require('./src/generator')
 const express = require('express')
-const app = express()
 const stockRoutes = require('./src/routes/stock.routes')
+const app = express()
 const mongoose = require('mongoose')
 const { ValidationError } = require('express-validation')
 const cors = require('cors')
