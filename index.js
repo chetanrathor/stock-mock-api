@@ -12,7 +12,7 @@ mongoose.connect(getMongoDbUrl()).then((result) => console.log("Database Connect
 app.use(express.json())
 app.use(cors())
 
-app.get('/api',(req,res)=>{
+app.get('/apis',(req,res)=>{
     res.send("hello world")
 })
 
