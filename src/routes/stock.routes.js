@@ -6,7 +6,7 @@ const { addNewStock, getOneStockValidation } = require('../validations/stock.val
  All the routes related to stock module will be here.
  */
 
-router.get('/', (request, response) => getStocks(request, response))
+router.get('/', (request, response) => response.send("api/stocks"))
 router.post('/', validate(addNewStock), (request, response) => addStock(request, response))
 router.get('/:id',(request,response)=>getOneStock(request, response))
 
