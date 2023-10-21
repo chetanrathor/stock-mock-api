@@ -15,7 +15,9 @@ app.use(cors())
 app.get('/api',(req,res)=>{
     res.send("hello world")
 })
-
+app.get('',(req,res)=>{
+    res.send('home')
+})
 app.get('/api/stocks', (request, response) => getStocks(request, response))
 app.post('/api/stocks', validate(addNewStock), (request, response) => addStock(request, response))
 app.get('/api/stocks/:id',(request,response)=>getOneStock(request, response))
