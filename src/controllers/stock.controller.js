@@ -5,6 +5,8 @@ module.exports = {
     getStocks: async (request, response) => {
         try {
             const data = await getAllStocks()
+            response.setHeader('Content-Type', 'text/html');
+            response.setHeader('Cache-Control', 's-max-age=1, stale-while-revalidate');
             getSuccessResponse({ request, response, data })
         }
         catch (error) {
@@ -15,6 +17,8 @@ module.exports = {
         try {
             const { body } = request
             const data = await addNewStock(body)
+            response.setHeader('Content-Type', 'text/html');
+            response.setHeader('Cache-Control', 's-max-age=1, stale-while-revalidate');
             getSuccessResponse({ request, response, data })
         }
         catch (error) {
@@ -25,6 +29,8 @@ module.exports = {
         try {
             console.log('request', request)
             const {id}  = request.params
+            response.setHeader('Content-Type', 'text/html');
+            response.setHeader('Cache-Control', 's-max-age=1, stale-while-revalidate');
             const data = await getOne(id)
             getSuccessResponse({ request, response, data })
         }
