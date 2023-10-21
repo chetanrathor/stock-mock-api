@@ -4,9 +4,10 @@
   "description": "API / Data Processing System For Web Application Of Stock Price Mock.",
   "main": "api/index.js",
   "scripts": {
-    "start:local": "nodemon api/index.js",
+    "start:local": "nodemon index.js",
     "start:prod": "node api/index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "vercel-build":"echo hello"
   },
   "author": "chetan rathor",
   "license": "ISC",
