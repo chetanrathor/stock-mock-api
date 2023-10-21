@@ -9,10 +9,13 @@ mongoose.connect(getMongoDbUrl()).then((result) => console.log("Database Connect
 
 app.use(express.json())
 app.use(cors())
-app.use('/stocks', stockRoutes)
+app.use('/stocks', (req, res) => {
+    res.setHeader('Content-Type', 'text/html');
+    res.setHeader('Cache-Control', 's-max-age=1, stale-while-revalidate');
+}, stockRoutes)
 app.use(function (error, request, response, next) {
     if (error instanceof ValidationError) {
-        return response.status(error.statusCode).json({status:false,message:error.details.body[0].message})
+        return response.status(error.statusCode).json({ status: false, message: error.details.body[0].message })
     }
 
 })
