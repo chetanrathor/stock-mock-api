@@ -5,7 +5,7 @@ const stockRoutes = require('../src/routes/stock.routes')
 const mongoose = require('mongoose')
 const { ValidationError } = require('express-validation')
 const cors = require('cors')
-mongoose.connect(getMongoDbUrl()).then((result) => console.log("Database Connected Successfully."))
+mongoose.connect(getMongoDbUrl()).then((result) => console.log("Database Connected Successfully.")).catch((e)=>console.log('e', e))
 
 app.use(express.json())
 app.use(cors())
