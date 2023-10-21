@@ -9,7 +9,7 @@ mongoose.connect(getMongoDbUrl()).then((result) => console.log("Database Connect
 
 app.use(express.json())
 app.use(cors())
-app.use('/stocks', stockRoutes)
+app.use('/api/stocks', stockRoutes)
 app.use(function (error, request, response, next) {
     if (error instanceof ValidationError) {
         return response.status(error.statusCode).json({ status: false, message: error.details.body[0].message })
