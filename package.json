@@ -4,8 +4,8 @@
   "description": "API / Data Processing System For Web Application Of Stock Price Mock.",
   "main": "index.js",
   "scripts": {
-    "start:local": "nodemon main.js",
-    "start:prod": "node main.js",
+    "start:local": "nodemon index.js",
+    "start:prod": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "chetan rathor",
