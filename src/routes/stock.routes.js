@@ -10,4 +10,5 @@ router.get('/', (request, response) => getStocks(request, response))
 router.post('/', validate(addNewStock), (request, response) => addStock(request, response))
 router.get('/:id',(request,response)=>getOneStock(request, response))
 
+
 module.exports = router
